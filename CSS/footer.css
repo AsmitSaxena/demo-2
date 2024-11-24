@@ -4,7 +4,7 @@
     justify-content: space-between;
     padding: 3rem;
     color: white;
-    background-image: url('assets/imgs/intro-background.jpg'); /* Replace with your background image */
+    background-color:#4682B4; /* Replace with your background image */
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
