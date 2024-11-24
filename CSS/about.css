@@ -1,0 +1,188 @@
+        /* Basic Reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+        }
+
+        /* Header Section */
+        .header-section {
+            padding: 2rem;
+            text-align: center;
+            background-color: #f0f8ff;
+        }
+
+        .header-section h1 {
+            font-size: 2.5rem;
+            color: #00008B;
+            margin-bottom: 1rem;
+            position: relative;
+        }
+
+        .header-section h1::after {
+            content: "";
+            width: 40%;
+            height: 2px;
+            background-color: #00008B;
+            display: block;
+            margin: 0.5rem auto 0;
+        }
+
+        /* Who Are We Section */
+        .who-we-are {
+            display: flex;
+            padding: 2rem;
+            background-color: #f8f8f8;
+        }
+
+        .who-we-are img {
+            flex: 1;
+            max-width: 100%;
+            border-radius: 8px;
+            margin-right: 2rem;
+        }
+
+        .who-we-are-content {
+            flex: 2;
+        }
+
+        .who-we-are-content h2 {
+            font-size: 2rem;
+            color: #00008B;
+            margin-bottom: 1rem;
+        }
+
+        .who-we-are-content p {
+            font-size: 1.1rem;
+            line-height: 1.6;
+        }
+
+        /* Our Objective Section */
+        .objective-section {
+            padding: 2rem;
+            background-color: #ffffff;
+            text-align: center;
+        }
+
+        .objective-section h2 {
+            font-size: 2rem;
+            color: #00008B;
+            margin-bottom: 1rem;
+            position: relative;
+        }
+
+        .objective-section h2::after {
+            content: "";
+            width: 40%;
+            height: 2px;
+            background-color: #00008B;
+            display: block;
+            margin: 0.5rem auto 0;
+        }
+
+        .objective-list {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 1.5rem;
+            margin-top: 1.5rem;
+            animation: fadeIn 1s ease-in-out;
+        }
+
+        .objective-item {
+            display: flex;
+            align-items: flex-start;
+            font-size: 1.1rem;
+            padding: 1rem;
+            border-radius: 8px;
+            background-color: #f8f9fa;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            animation: slideUp 1s ease;
+            transition: transform 0.3s ease;
+        }
+
+        .objective-item:hover {
+            transform: scale(1.05);
+        }
+
+        .objective-item i {
+            font-size: 2rem;
+            color: #00008B;
+            margin-right: 1rem;
+        }
+
+              /* Our Vision & Mission Section */
+              .vision-mission-section {
+                display: flex;
+                padding: 2rem;
+                background-color: #f0f8ff;
+                gap: 2rem;
+                justify-content: center;
+            }
+    
+            .vision-mission-card {
+                flex: 1;
+                padding: 2rem;
+                border-radius: 8px;
+                background-color: #00008B;
+                box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+                text-align: center;
+                animation: fadeIn 1s ease-in-out;
+                transition: transform 0.3s ease;
+            }
+    
+            .vision-mission-card:hover {
+                transform: scale(1.05);
+            }
+    
+            .vision-mission-card h2 {
+                font-size: 2rem;
+                color: #87CEEB;
+                margin-bottom: 1rem;
+            }
+    
+            .vision-mission-card p {
+                font-size: 1.1rem;
+                line-height: 1.6;
+                color: #ffffff;
+            }
+    
+            /* Animations */
+            @keyframes fadeIn {
+                from {
+                    opacity: 0;
+                    transform: translateY(10px);
+                }
+                to {
+                    opacity: 1;
+                    transform: translateY(0);
+                }
+            }
+    
+            @keyframes slideUp {
+                from {
+                    opacity: 0;
+                    transform: translateY(20px);
+                }
+                to {
+                    opacity: 1;
+                    transform: translateY(0);
+                }
+            }
+
+            /* Responsive Design */
+@media (max-width: 768px) {
+    .who-we-are img {
+        display : none ;
+    }
+}
+
+.who-we-are-content h2 {
+    font-size: 2rem;
+    color: #00008B;
+    margin-bottom: 1rem;
+    text-align: center;
+}

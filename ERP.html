@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UVP Foundation ERP Login</title>
+    <link rel="stylesheet" href="CSS/nav.css">
+    <link rel="stylesheet" href="CSS/ERP.css">
+    <link rel="stylesheet" href="CSS/footer.css"></head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar">
+        <div class="navbar-logo">
+            <img src="assets/imgs/logo.png" alt="UVP Foundation Logo" />
+            <span class="hamburger" onclick="toggleNavbar()">&#9776;</span>
+        </div>
+        <ul class="navbar-links">
+            <li><a href="index.html" class="nav-link">Home</a></li>
+            <li><a href="about.html" class="nav-link">About</a></li>
+            <li><a href="programs.html" class="nav-link">Programs</a></li>
+            <li><a href="roadmap.html" class="nav-link">Roadmap</a></li>
+            <li><a href="gallery.html" class="nav-link">Gallery</a></li>
+            <li><a href="contact.html" class="nav-link">Contact Us</a></li>
+            <li><a href="ERP.html" class="register-btn">ERP</a></li>
+        </ul>
+    </nav>
+
+    <!-- Main Section -->
+    <div class="main-section">
+        <div class="card">
+            <h2>Welcome to ERP</h2>
+            <p>Select User Type:</p>
+            <div class="radio-buttons">
+                <label><input type="radio" name="userType" value="startup"> Startup</label>
+                <label><input type="radio" name="userType" value="university"> University/College</label>
+            </div>
+
+            <!-- Tabs for Login and Sign Up -->
+            <div class="tabs">
+                <button class="tab-btn active" data-tab="login">Login</button>
+                <button class="tab-btn" data-tab="signup">Sign Up</button>
+            </div>
+
+            <!-- Login Form -->
+            <div id="login" class="tab-content active">
+                <form>
+                    <label for="username">Username:</label>
+                    <input type="text" id="username" placeholder="Enter username">
+                    <label for="password">Password:</label>
+                    <input type="password" id="password" placeholder="Enter password">
+                    <a href="#" class="reset-link">Forgot Password?</a>
+                    <button type="submit" class="btn">Login</button>
+                </form>
+            </div>
+
+            <!-- Sign Up Form -->
+            <div id="signup" class="tab-content">
+                <form>
+                    <label for="name">Name:</label>
+                    <input type="text" id="name" placeholder="Enter your name">
+                    <label for="organisation">Name of Organisation:</label>
+                    <input type="text" id="organisation" placeholder="Organisation name">
+                    <label for="mobile">Mobile Number:</label>
+                    <input type="tel" id="mobile" placeholder="Enter mobile number">
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" placeholder="Enter email">
+                    <label for="address">Address:</label>
+                    <textarea id="address" placeholder="Enter your address"></textarea>
+                    <button type="submit" class="btn">Sign Up</button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <!-- Column 1: Company Info -->
+        <div class="footer-column">
+            <h3>UVP Foundation</h3>
+            <img src="assets/imgs/logo.png" alt="UVP Foundation Logo" class="footer-logo"> <!-- Replace with your logo path -->
+            <p>Udyam Vidya Prasar Foundation is a section 8 company, working in startup and entrepreneurship, skill development, education, research and development, innovation commercialization, and self-employment. It is an association of professionals who are working in skill development, innovation, incubation, and entrepreneurship for the last 17 years.</p>
+        </div>
+
+        <!-- Column 2: Quick Links -->
+        <div class="footer-column">
+            <h3>Quick Links</h3><br>
+            <ul class="quick-links">
+                <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="programs.html">Programs</a></li>
+            <li><a href="gallery.html">Our Gallery</a></li>
+            <li><a href="roadmap.html">Roadmap</a></li>
+            </ul>
+        </div>
+
+        <!-- Column 3: Contact Info -->
+        <div class="footer-column">
+            <h3>Contact Us</h3><br>
+            <div class="contact-info">
+                <p>Ashish D. Thombre<br>
+                    Udyam Vidya Prasar Foundation<br>
+                    Mobile No.: 9871963840<br>
+                    Email: <a href="mailto:upv.foundation@gmail.com">upv.foundation@gmail.com</a></p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+                    // Highlight the active nav link
+    document.querySelectorAll(".nav-link").forEach(link => {
+        if (link.href === window.location.href) {
+            link.classList.add("active");
+        }
+    });
+
+    
+function toggleNavbar() {
+    const links = document.querySelector('.navbar-links');
+    links.classList.toggle('active');
+}
+
+// Tab Switching Logic
+const tabs = document.querySelectorAll('.tab-btn');
+const tabContents = document.querySelectorAll('.tab-content');
+
+tabs.forEach(tab => {
+    tab.addEventListener('click', () => {
+        tabs.forEach(btn => btn.classList.remove('active'));
+        tab.classList.add('active');
+
+        tabContents.forEach(content => {
+            content.classList.remove('active');
+        });
+
+        document.getElementById(tab.getAttribute('data-tab')).classList.add('active');
+    });
+});
+
+    </script>
+</body>
+</html>

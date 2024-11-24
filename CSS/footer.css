@@ -1,0 +1,64 @@
+/* Footer Section */
+.footer {
+    display: flex;
+    justify-content: space-between;
+    padding: 3rem;
+    color: white;
+    background-image: url('assets/imgs/intro-background.jpg'); /* Replace with your background image */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    text-align: left;
+                }
+        
+                /* Footer Columns */
+                .footer-column {
+                    flex: 1;
+                    padding: 0 1.5rem;
+                }
+        
+                /* Section Headings */
+                .footer-column h3 {
+                    font-size: 1.8rem;
+                    margin-bottom: 1rem;
+                    color: #FFD700; /* Optional: use a gold or accent color for headings */
+                }
+        
+                /* First Column Text */
+                .footer-column p {
+                    font-size: 1rem;
+                    line-height: 1.6;
+                    margin-top: 1rem;
+                }
+        
+                /* Logo */
+                .footer-logo {
+                    max-width: 100px;
+                    margin-top: 1rem;
+                }
+        
+                /* Quick Links */
+                .quick-links {
+                    list-style: none;
+                    margin-top: 1rem;
+                }
+        
+                .quick-links li {
+                    margin-bottom: 0.5rem;
+                }
+        
+                .quick-links a {
+                    text-decoration: none;
+                    color: white;
+                    transition: color 0.3s;
+                }
+        
+                .quick-links a:hover {
+                    color: #FFD700; /* Optional: use a gold or accent color for link hover */
+                }
+        
+                /* Contact Info */
+                .contact-info {
+                    margin-top: 1rem;
+                }
+        
