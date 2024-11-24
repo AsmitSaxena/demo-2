@@ -35,7 +35,7 @@
     /* Left Part - Background and Text */
     .intro-left {
         flex: 7;
-        background-image: url('assets/imgs/intro-background.jpg'); /* Replace with your background image */
+        background-color:#4682B4; /* Replace with your background image */
         background-size: cover; /* Ensures the background covers the entire area */
         background-position: center; /* Centers the background image */
         background-repeat: no-repeat; /* Prevents image repetition */
